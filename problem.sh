@@ -1,0 +1,2 @@
+#!/bin/bash
+ddaattee --help
