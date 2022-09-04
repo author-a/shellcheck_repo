@@ -9,6 +9,7 @@ jobs:
         uses: ludeeus/action-shellcheck@master
   shellcheck_from_CICDToolbox:
     runs-on: ubuntu-latest
+    steps:
     - name: Run Shellcheck
       run: bash <(curl -s https://raw.githubusercontent.com/CICDToolbox/shellcheck/master/pipeline.sh)
 
