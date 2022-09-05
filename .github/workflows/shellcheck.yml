@@ -1,5 +1,8 @@
 name: shellcheck
-on: [push]
+on:
+  pull_request:
+    branches: 
+      - main
 jobs:
   shellcheck_that_did_not_found_mistakes_in_problem_shell_file:
     runs-on: ubuntu-latest
@@ -7,9 +10,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run ShellCheck
         uses: ludeeus/action-shellcheck@master
-  shellcheck_from_CICDToolbox:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Run Shellcheck
-      run: bash <(curl -s https://raw.githubusercontent.com/CICDToolbox/shellcheck/master/pipeline.sh)
+
 
