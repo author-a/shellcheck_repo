@@ -2,7 +2,7 @@ name: shellcheck
 on:
   pull_request:
     branches: 
-      - main
+      - master
 jobs:
   shellcheck_that_did_not_found_mistakes_in_problem_shell_file:
     runs-on: ubuntu-latest
