@@ -1,0 +1,10 @@
+name: shellcheck2
+on:
+  pull_request:
+    branches: 
+      - main
+jobs:shellcheck_from_CICDToolbox:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run Shellcheck
+      run: bash <(curl -s https://raw.githubusercontent.com/CICDToolbox/shellcheck/master/pipeline.sh)
