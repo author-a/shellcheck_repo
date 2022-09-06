@@ -1,0 +1,13 @@
+name: shellcheck
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  shellcheck_that_did_not_found_mistakes_in_problem_shell_file:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master
+
