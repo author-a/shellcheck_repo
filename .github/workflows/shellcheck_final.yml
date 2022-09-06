@@ -4,7 +4,7 @@ on:
     branches:
       - master
 jobs:
-  shellcheck_that_did_not_found_mistakes_in_problem_shell_file:
+  shellcheck:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
